@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body {
+    background-color: lightblue;
+}
+
+.judul {
+    font-size: 36px;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-item {
+    background-color: steelblue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Smartphone */
+@media only screen and (max-width: 600px) {
+
+    body {
+        background-color: lightcoral;
+    }
+
+    .judul {
+        font-size: 24px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<h1 class="judul">Responsive Design CSS</h1>
+
+<div class="grid-container">
+    <div class="grid-item">Item 1</div>
+    <div class="grid-item">Item 2</div>
+    <div class="grid-item">Item 3</div>
+</div>
+
+</body>
+</html>
