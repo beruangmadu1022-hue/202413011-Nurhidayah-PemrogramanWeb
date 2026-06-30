@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Latihan Objek Date</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f4f4;
+            text-align:center;
+            margin-top:60px;
+        }
+
+        h2{
+            color:darkblue;
+        }
+
+        #jam{
+            font-size:45px;
+            font-weight:bold;
+            color:blue;
+            margin-top:20px;
+        }
+
+        #tanggal{
+            font-size:22px;
+            color:#444;
+            margin-top:15px;
+        }
+
+    </style>
+
+</head>
+
+<body onload="jalankanJam()">
+
+<h2>Jam Digital dan Tanggal Hari Ini</h2>
+
+<div id="jam"></div>
+
+<div id="tanggal"></div>
+
+<script>
+
+function updateJam(){
+
+    var sekarang = new Date();
+
+    var jam = sekarang.getHours();
+    var menit = sekarang.getMinutes();
+    var detik = sekarang.getSeconds();
+
+    jam = (jam < 10 ? "0" : "") + jam;
+    menit = (menit < 10 ? "0" : "") + menit;
+    detik = (detik < 10 ? "0" : "") + detik;
+
+    var waktu = jam + ":" + menit + ":" + detik;
+
+    document.getElementById("jam").innerHTML = waktu;
+
+    var hari = [
+        "Minggu",
+        "Senin",
+        "Selasa",
+        "Rabu",
+        "Kamis",
+        "Jumat",
+        "Sabtu"
+    ];
+
+    var bulan = [
+        "Januari",
+        "Februari",
+        "Maret",
+        "April",
+        "Mei",
+        "Juni",
+        "Juli",
+        "Agustus",
+        "September",
+        "Oktober",
+        "November",
+        "Desember"
+    ];
+
+    var tanggal =
+        hari[sekarang.getDay()] + ", " +
+        sekarang.getDate() + " " +
+        bulan[sekarang.getMonth()] + " " +
+        sekarang.getFullYear();
+
+    document.getElementById("tanggal").innerHTML = tanggal;
+
+}
+
+function jalankanJam(){
+
+    updateJam();
+
+    setInterval(updateJam,1000);
+
+}
+
+</script>
+
+</body>
+</html>

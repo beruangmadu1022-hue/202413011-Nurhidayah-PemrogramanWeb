@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Latihan Objek Math</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            margin:40px;
+            background:#f4f4f4;
+            text-align:center;
+        }
+
+        h2{
+            color:darkblue;
+        }
+
+        button{
+            padding:10px 20px;
+            font-size:16px;
+            cursor:pointer;
+            margin-top:20px;
+        }
+
+        #hasil{
+            margin-top:30px;
+            font-size:22px;
+            font-weight:bold;
+            color:blue;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h2>Generator Angka Acak</h2>
+
+<p>Klik tombol di bawah untuk menghasilkan angka acak antara <b>1 - 100</b>.</p>
+
+<button onclick="generateRandom()">
+    Generate Angka
+</button>
+
+<div id="hasil">-</div>
+
+<script>
+
+function generateRandom(){
+
+    var angka = Math.floor(Math.random() * 100) + 1;
+
+    document.getElementById("hasil").innerHTML = angka;
+
+}
+
+</script>
+
+</body>
+</html>

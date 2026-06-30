@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Latihan Perulangan</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        h2{
+            color: darkblue;
+        }
+
+        ul{
+            width: 250px;
+        }
+
+        li{
+            padding: 8px;
+            margin: 5px 0;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+        }
+
+        li:hover{
+            background-color: #dbeafe;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h2>Daftar Nama Teman Kelas</h2>
+
+<ul id="daftar-teman">
+
+</ul>
+
+<script>
+
+var teman = [
+
+    "Nurhidayah",
+    "Tiara Khairunnisa",
+    "Mutiara Ramadhani",
+    "Siti Aisyah",
+    "Aulia"
+
+];
+
+var daftarElement = document.getElementById("daftar-teman");
+
+for(let i = 0; i < teman.length; i++){
+
+    daftarElement.innerHTML += "<li>" + teman[i] + "</li>";
+
+}
+
+</script>
+
+</body>
+</html>

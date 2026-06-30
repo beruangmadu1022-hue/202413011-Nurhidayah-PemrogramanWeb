@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Latihan Objek String</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            margin:40px;
+            background:#f4f4f4;
+        }
+
+        h2{
+            color:darkblue;
+        }
+
+        input{
+            width:300px;
+            padding:8px;
+        }
+
+        button{
+            padding:8px 15px;
+            cursor:pointer;
+            margin-left:5px;
+        }
+
+        #hasilAnalisis{
+            margin-top:20px;
+            background:white;
+            padding:15px;
+            border-radius:8px;
+            box-shadow:0 0 8px rgba(0,0,0,0.2);
+            width:400px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h2>Analisis Nama Menggunakan Objek String</h2>
+
+<input
+type="text"
+id="inputNama"
+placeholder="Masukkan nama Anda">
+
+<button onclick="analisisNama()">Analisis</button>
+
+<p id="hasilAnalisis"></p>
+
+<script>
+
+function analisisNama(){
+
+    var nama = document.getElementById("inputNama").value;
+
+    if(nama==""){
+
+        alert("Silakan masukkan nama terlebih dahulu!");
+
+        return;
+
+    }
+
+    var hasil = "";
+
+    hasil += "<b>Nama Asli :</b> " + nama + "<br><br>";
+
+    hasil += "<b>Huruf Kapital :</b> " + nama.toUpperCase() + "<br><br>";
+
+    hasil += "<b>Huruf Kecil :</b> " + nama.toLowerCase() + "<br><br>";
+
+    hasil += "<b>Jumlah Karakter :</b> " + nama.length + "<br><br>";
+
+    hasil += "<b>3 Karakter Pertama :</b> " + nama.substring(0,3) + "<br><br>";
+
+    hasil += "<b>3 Karakter Terakhir :</b> " + nama.substring(nama.length-3) + "<br><br>";
+
+    document.getElementById("hasilAnalisis").innerHTML = hasil;
+
+}
+
+</script>
+
+</body>
+</html>
